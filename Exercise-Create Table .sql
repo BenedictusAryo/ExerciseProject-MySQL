@@ -1,6 +1,6 @@
 /*
 Udemy Course Practice 
-
+& Lecture Code
 Course : SQL - MySQL for Data Analytics and Bussiness Inteligence
 365 Careers
 
@@ -8,15 +8,25 @@ Benedict Aryo
 
 */
 
+##########################################################
 /* 
-Create Database sales
-Using "IF NOT EXISTS" */
+SECTION :
+Create DATABASE sales
+Using "IF NOT EXISTS" 
+*/
+##########################################################
 
 create database	if not exists sales;
 
 -- Select sales database as a working area
 use sales;
 
+##########################################################
+/* 
+SECTION :
+Create TABLE
+*/
+##########################################################
 --Create table sales Tutorial :
 
 CREATE TABLE sales
@@ -27,7 +37,7 @@ customer_id INT,
 item_code VARCHAR(10) NOT NULL
 );
 
---Create Table "customers" exercise
+--Create Table "customers" Exercise
 
 CREATE TABLE customers
 (
@@ -38,18 +48,23 @@ email_address VARCHAR(255),
 number_of_complaints INT
 );
 
+##########################################################
 /*
+SECTION :
 CONSTRAINTS PRIMARY key
-
 */
+##########################################################
 
 -- Exercise Select Table
 select * from sales.sales;
 
+
 -- Exercise Delete table sales
 drop table sales;
 
+
 -- Another way to select Primary key column :
+
 CREATE TABLE sales
 (
  purchase_number INT NOT NULL auto_increment,
@@ -58,7 +73,6 @@ CREATE TABLE sales
  item_code VARCHAR(10) NOT NULL,
 primary key (purchase_number)
 );
-
 
 -- Exercise Primary key constraint :
 drop table customers;
@@ -95,11 +109,12 @@ create table companies
 primary key(company_id)
  );
  
+########################################################## 
  /*
+ SECTION :
  Exercise FOREIGN KEY Constraint
- 
  */
- 
+##########################################################
  -- FOREIGN KEY Constraint 
 
 drop table sales;
