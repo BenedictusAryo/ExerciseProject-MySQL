@@ -27,7 +27,7 @@ SECTION :
 Create TABLE
 */
 ##########################################################
---Create table sales Tutorial :
+-- Create table sales Tutorial :
 
 CREATE TABLE sales
 (
@@ -37,7 +37,7 @@ customer_id INT,
 item_code VARCHAR(10) NOT NULL
 );
 
---Create Table "customers" Exercise
+-- Create Table "customers" Exercise
 
 CREATE TABLE customers
 (
@@ -115,6 +115,7 @@ primary key(company_id)
  Exercise FOREIGN KEY Constraint
  */
 ##########################################################
+
  -- FOREIGN KEY Constraint 
 
 drop table sales;
