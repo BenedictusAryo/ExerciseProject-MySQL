@@ -1,9 +1,22 @@
-# Create Database sales
+/*
+Udemy Course Practice 
+
+Course : SQL - MySQL for Data Analytics and Bussiness Inteligence
+365 Careers
+
+Benedict Aryo
+
+*/
+
+/* Create Database sales */
+/* Using "IF NOT EXISTS"*/
+
 create database	if not exists sales;
-# Select sales database as a working area
+/* Select sales database as a working area */
+
 use sales;
 
-# Create table sales Tutorial :
+/* Create table sales Tutorial :*/
 
 CREATE TABLE sales
 (
@@ -13,7 +26,7 @@ customer_id INT,
 item_code VARCHAR(10) NOT NULL
 );
 
-# Create Table exercise
+/* Create Table "customers" exercise */
 
 CREATE TABLE customers
 (
