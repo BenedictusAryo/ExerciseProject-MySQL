@@ -32,9 +32,10 @@ create table customers (
  alter table customers
  drop index email_address;
  
- -- Exercise
-drop table customers;
 
+
+-- UNIQUE COnstraint - exercise
+drop table if exists customers;
 create table customers (
  customer_id int auto_increment,
  first_name varchar(255),
@@ -92,7 +93,9 @@ alter table customers
 alter column number_of_complaints drop default;
 
 -- ---------------------------------
+-- ---------------------------------
 -- Exercise DEFAULT Key
+-- ---------------------------------
 -- ---------------------------------
 drop table if exists companies;
 create table companies (
@@ -102,9 +105,49 @@ create table companies (
  unique key (headquarters_phone_number)
  );
  
- insert into companies (company_id, headquarters_phone_number)
- values ('C_1', 1231234)
- values ('C_2', 1234568);
+ drop table if exists companies;
  
- select * from companies;
+
+########################################################## 
+ /*
+ SECTION :
+ NOT NULL Constraint
+ */
+##########################################################
+
+ -- NOT NULL Constraint 
  
+# 				  Primary Key | Unique Key
+-- 				   -------------------------
+#   Null Values       No      |    Yes
+
+create table companies
+(
+	company_id int auto_increment,
+    headquarters_phone_number varchar(255),
+    company_name varchar(255) not null,
+primary key(company_id)
+);
+
+# Drop Not Null Constraint
+alter table companies
+modify column company_name varchar(255) null; 
+
+# Change to Not Null
+alter table companies
+change column company_name company_name varchar(255) not null;
+
+#Check the not null constraint
+insert into companies (headquarters_phone_number,company_name)
+values ('+1 (202) 555-0196','Company A')
+;
+
+-- Exercise
+alter table companies
+modify headquarters_phone_number varchar(255) null;
+
+alter table companies
+change column headquarters_phone_number headquarters_phone_number varchar(255) not null;
+
+
+
