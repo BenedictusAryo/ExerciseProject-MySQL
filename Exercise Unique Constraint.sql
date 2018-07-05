@@ -121,12 +121,12 @@ create table companies (
 -- 				   -------------------------
 #   Null Values       No      |    Yes
 
-create table companies
+CREATE TABLE companies 
 (
-	company_id int auto_increment,
-    headquarters_phone_number varchar(255),
-    company_name varchar(255) not null,
-primary key(company_id)
+    company_id INT AUTO_INCREMENT,
+    headquarters_phone_number VARCHAR(255),
+    company_name VARCHAR(255) NOT NULL,
+PRIMARY KEY (company_id)
 );
 
 # Drop Not Null Constraint
@@ -138,7 +138,7 @@ alter table companies
 change column company_name company_name varchar(255) not null;
 
 #Check the not null constraint
-insert into companies (headquarters_phone_number,company_name)
+insert into companies (headquarters_phone_number,company_name) 
 values ('+1 (202) 555-0196','Company A')
 ;
 
